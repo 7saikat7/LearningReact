@@ -27,10 +27,13 @@ class Counter extends Component{
         this.increment();
     }
     render(){
+        var val=this.state.count
+        if(!val){ val ="Let's Increment this value"}
+        else{ val="counter value ==" +val}
         
         return (
             <div>
-            <h2>Counter Value: {this.state.count}</h2>
+            <h2>{val}</h2>  
             <button onClick={()=>this.incrementFive()}>Increment</button>
             </div>
         )
